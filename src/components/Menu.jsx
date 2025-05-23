@@ -1,4 +1,5 @@
 import React from "react";
+import MenuCard from "../layouts/MenuCard";
 
 const dishes = [
   {
@@ -71,25 +72,7 @@ const Menu = () => {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
         {dishes.map((dish) => (
-          <div
-            key={dish.id}
-            className="group bg-gray-100 dark:bg-[#1F1D2B] p-6 rounded-2xl hover:bg-orange-500 dark:hover:bg-orange-500 transition-all duration-300"
-          >
-            <div className="relative mb-4">
-              <img src={dish.image} alt={dish.name} className="mx-auto" />
-              {dish.tag && (
-                <span className="absolute -top-3.5 -left-4 bg-orange-500 text-white group-hover:bg-black text-xs px-2 py-1 rounded-md">
-                  {dish.tag}
-                </span>
-              )}
-            </div>
-            <h3 className="text-xl font-semibold mb-2 group-hover:text-white transition-colors duration-300">
-              {dish.name}
-            </h3>
-            <p className="text-lg font-bold text-orange-500 group-hover:text-white transition-colors duration-300">
-              {dish.price}
-            </p>
-          </div>
+          <MenuCard key={dish.id} {...dish} /> // JS This is Spread Operator or in react props spread syntax
         ))}
       </div>
     </section>

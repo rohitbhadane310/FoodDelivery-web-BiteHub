@@ -78,11 +78,11 @@ const Testimonial = () => {
                     <div>
                       <h4 className="font-semibold">{review.name}</h4>
                       <div className="flex text-yellow-400 text-sm">
-                        {[...Array(5)].map((_, i) =>
-                          i < review.rating ? (
-                            <FaStar key={i} />
+                        {[...Array(5)].map((_, i) =>   // Create an array with 5 elements
+                          i < review.rating ? (        // If the index is less than the rating,
+                            <FaStar key={i} />         // show a filled star
                           ) : (
-                            <FaRegStar key={i} />
+                            <FaRegStar key={i} />      // otherwise, show an empty star
                           )
                         )}
                       </div>

@@ -84,13 +84,13 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Contact</h3>
           <ul className="space-y-2 text-gray-700 dark:text-gray-300">
             <li className="hover:text-orange-400 transition">
-              Email: support@foody.com
+              Email: support@BiteHub.com
             </li>
             <li className="hover:text-orange-400 transition">
               Phone: +91 98765 43210
             </li>
             <li className="hover:text-orange-400 transition">
-              Location: Mumbai, India
+              Location: San Francisco, USA
             </li>
           </ul>
         </div>
